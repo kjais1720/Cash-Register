@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Montserrat+Alternates&display=swap');
+
+*,*::after,*::before{
+    box-sizing:border-box;
+    margin: auto;
+    padding: 0;
+}
+
+
+main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+    padding: 5vh 10vw;
+}
+
+main .container >*{
+    margin-top: 20px;
+}
+
+h1{
+    font-family: 'Merienda', cursive;
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: teal;
+}
+
+p{
+    font-family: 'Montserrat Alternates', serif;
+    max-width: 50ch;
+    font-size: 1.5rem;
+    color: hsla(180, 100%, 25%,0.85);
+}
+
+label,input{
+    display: block;
+    text-align: center;
+}
+
+label{
+    font-weight: bold;
+    font-family: 'Merienda',cursive,serif;
+    color:rgba(0,0,0,0.8);
+}
+
+input{
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    max-width: 200px;
+    border: solid 2px #008080;
+    border-radius: 10px;
+}
+
+
+button{
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+    background-color: teal;
+    color: #fff;
+    border-radius: 10px;
+}
+
+input:is(:focus, :active), button:is(:focus, :active){
+    box-shadow: 0px 0px 0px 3px hsla(180, 100%, 25%,0.4);
+    outline: none;
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+h3{
+    font-family: 'Merienda',cursive,serif;
+    color: rgba(0,0,0,0.7);
+}
+
+table{
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+td{
+    width: 60px;
+    border: solid 2px #008080;
+    padding: 5px;
+
+}
+
+@media (max-width: 600px){
+    h1{
+        font-size: unset;
+    }
+    p{
+        font-size: unset;
+    }
+    button{
+        font-size: unset;
+    }
+    main{
+        padding: 30px 5vw;
+    }
+}
+
