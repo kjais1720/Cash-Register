@@ -10,17 +10,25 @@ button.addEventListener("click", () => {
     const bill = parseInt(billInput.value, 10);
     var returnCash = cash - bill;
     var note;
-    
+    console.log(cash, bill);
     if(cash && bill){
-        audio.play();
-        setTimeout(()=>{
-            denominations.forEach((column, index) => {
-                note = parseInt(column.innerText, 10);
-                returnAmount.innerText = cash-bill;
-                outputColumns[index].innerText = Math.floor(returnCash / note);
-                returnCash = returnCash % note;
-            });
-        }, 700);
+
+        if(cash <0 || bill <0){
+            returnAmount.innerHTML = "Invalid Input";
+            cashInput.value = "";
+            billInput.value = "";
+        }
+        else{
+            audio.play();
+            setTimeout(()=>{
+                denominations.forEach((column, index) => {
+                    note = parseInt(column.innerText, 10);
+                    returnAmount.innerText = cash-bill;
+                    outputColumns[index].innerText = Math.floor(returnCash / note);
+                    returnCash = returnCash % note;
+                });
+            }, 700);
+        }
     }
 
 })
