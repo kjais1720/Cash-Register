@@ -12,20 +12,15 @@ button.addEventListener("click", () => {
     var note;
     
     if(cash && bill){
-        if(cash <0 || bill<0){
-            returnAmount.innerText = `Please enter positive values for the inputs`
-        }
-        else{
-            audio.play();
-            setTimeout(()=>{
-                denominations.forEach((column, index) => {
-                    note = parseInt(column.innerText, 10);
-                    returnAmount.innerText = cash-bill;
-                    outputColumns[index].innerText = Math.floor(returnCash / note);
-                    returnCash = returnCash % note;
-                });
-            }, 700);
-        }
+        audio.play();
+        setTimeout(()=>{
+            denominations.forEach((column, index) => {
+                note = parseInt(column.innerText, 10);
+                returnAmount.innerText = cash-bill;
+                outputColumns[index].innerText = Math.floor(returnCash / note);
+                returnCash = returnCash % note;
+            });
+        }, 700);
     }
 
 })
