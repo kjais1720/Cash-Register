@@ -89,6 +89,54 @@ td{
 
 }
 
+
+footer{
+    text-align: center;
+    min-height: 25vh;
+    position: relative;
+    font-family: 'Montseerrat Alternates',serif;
+}
+.footer-links{
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+}
+footer a{
+    text-decoration: none;
+    color: #008080;
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    transition: all ease 0.5s;
+    margin: 0;
+}
+
+footer a:hover{
+    transform: scale(1.1);
+    color: #0f1657;
+}
+
+#copyright{
+    font-size: 1rem;
+}
+
+#copyright a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #0f1657;
+}
+
+#copyright a:hover{
+    transform: scale(1.5);
+    color: #008080;
+}
+
+
+
+
+
 @media (max-width: 600px){
     h1{
         font-size: unset;
